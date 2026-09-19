@@ -1,0 +1,14 @@
+name: Deploy
+
+on: # trigger
+  push: # Whenver code is pushed to github the workflow automatically runs 
+  workflow_call: # Whenever this workflow need to be called from another workflow 
+  workflow_dispacth: # Whenever you wnat the workflow to be called manually
+  schedule: # whenever you want the workflow to run at a specific time 
+
+ jobs:
+   build:
+     runs-on: ubuntu-latest
+     steps:
+       - name: Deploy the Code
+         run: echo "Code Deployed AWS-EC2 instance"
